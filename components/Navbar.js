@@ -37,6 +37,12 @@ export default function Navbar(props) {
               </a>
             </Link>
 
+            <Link href="/pricing">
+              <a className="block h-16 leading-[4rem] border-b-4 border-transparent hover:text-pink-700 hover:border-current">
+                Pricing
+              </a>
+            </Link>
+
             <Link href="/login">
               <a className="block h-16 leading-[4rem] border-b-4 border-transparent hover:text-pink-700 hover:border-current">
                 Login
