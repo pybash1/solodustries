@@ -32,19 +32,19 @@ export default function Navbar(props) {
         <div className="flex items-center justify-end flex-1">
           <nav className="hidden lg:uppercase lg:text-gray-500 lg:tracking-wide lg:font-bold lg:text-xs lg:space-x-4 lg:flex">
             <Link href="/#features">
-              <a className="block h-16 leading-[4rem] border-b-4 border-transparent hover:text-indigo-700 hover:border-current">
+              <a className="block h-16 leading-[4rem] border-b-4 border-transparent hover:text-pink-700 hover:border-current">
                 Features
               </a>
             </Link>
 
             <Link href="/login">
-              <a className="block h-16 leading-[4rem] border-b-4 border-transparent hover:text-indigo-700 hover:border-current">
+              <a className="block h-16 leading-[4rem] border-b-4 border-transparent hover:text-pink-700 hover:border-current">
                 Login
               </a>
             </Link>
 
             <Link href="/onboarding">
-              <a className="block h-16 leading-[4rem] border-b-4 border-transparent hover:text-indigo-700 hover:border-current">
+              <a className="block h-16 leading-[4rem] border-b-4 border-transparent hover:text-pink-700 hover:border-current">
                 Get Started
               </a>
             </Link>
@@ -56,7 +56,7 @@ export default function Navbar(props) {
                 <span>
                   <a
                     href="/cart"
-                    className="block p-6 border-b-4 border-transparent hover:border-indigo-700"
+                    className="block p-6 border-b-4 border-transparent hover:border-pink-700"
                   >
                     <svg
                       className="w-4 h-4"
@@ -80,7 +80,7 @@ export default function Navbar(props) {
                 <span>
                   <a
                     href="/account"
-                    className="block p-6 border-b-4 border-transparent hover:border-indigo-700"
+                    className="block p-6 border-b-4 border-transparent hover:border-pink-700"
                   >
                     <svg
                       className="w-4 h-4"
@@ -104,7 +104,7 @@ export default function Navbar(props) {
                 <span className="hidden sm:block">
                   <a
                     href="/search"
-                    className="block p-6 border-b-4 border-transparent hover:border-indigo-700"
+                    className="block p-6 border-b-4 border-transparent hover:border-pink-700"
                   >
                     <svg
                       className="w-4 h-4"

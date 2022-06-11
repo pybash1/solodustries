@@ -84,7 +84,7 @@ export default function Footer() {
           <p className="max-w-lg mx-auto text-xs text-gray-500">
             Solodustries is a completely free to use and open source software, with its source available on GitHub. It was made as a project for the OneHacks II Hackathon by PyBash.
             <a
-              className="block mt-1 text-indigo-600 underline decoration-wavy decoration-indigo-500 hover:opacity-75"
+              className="block mt-1 text-pink-600 underline decoration-wavy decoration-pink-500 hover:opacity-75"
               href="/"
               target="_blank"
               rel="noopener noreferrer"
@@ -92,7 +92,7 @@ export default function Footer() {
               OneHacks II Hackathon
             </a>
             <a
-              className="block mt-1 text-indigo-600 underline decoration-wavy decoration-indigo-500 hover:opacity-75"
+              className="block mt-1 text-pink-600 underline decoration-wavy decoration-pink-500 hover:opacity-75"
               href="/"
               target="_blank"
               rel="noopener noreferrer"

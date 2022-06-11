@@ -14,10 +14,10 @@ export default function Features() {
         </div>
 
         <div className="grid grid-cols-1 gap-8 mt-8 md:grid-cols-2 lg:grid-cols-3">
-          <a className="block p-8 transition border border-gray-800 shadow-xl rounded-xl hover:shadow-indigo-500/10 hover:border-indigo-500/10">
+          <a className="block p-8 transition border border-gray-800 shadow-xl rounded-xl hover:shadow-pink-500/10 hover:border-pink-500/10">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="w-10 h-10 text-indigo-500"
+              className="w-10 h-10 text-pink-500"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
@@ -41,10 +41,10 @@ export default function Features() {
             </p>
           </a>
 
-          <a className="block p-8 transition border border-gray-800 shadow-xl rounded-xl hover:shadow-indigo-500/10 hover:border-indigo-500/10">
+          <a className="block p-8 transition border border-gray-800 shadow-xl rounded-xl hover:shadow-pink-500/10 hover:border-pink-500/10">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="w-10 h-10 text-indigo-500"
+              className="w-10 h-10 text-pink-500"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
@@ -66,10 +66,10 @@ export default function Features() {
             </p>
           </a>
 
-          <a className="block p-8 transition border border-gray-800 shadow-xl rounded-xl hover:shadow-indigo-500/10 hover:border-indigo-500/10">
+          <a className="block p-8 transition border border-gray-800 shadow-xl rounded-xl hover:shadow-pink-500/10 hover:border-pink-500/10">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="w-10 h-10 text-indigo-500"
+              className="w-10 h-10 text-pink-500"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
@@ -86,7 +86,7 @@ export default function Features() {
 
             <h3 className="mt-4 text-xl font-bold text-white">
               Scheduling and Calendar &nbsp;
-              <strong className="bg-indigo-500 border-indigo-500 border text-white px-3 py-1.5 rounded text-[12px] font-medium">
+              <strong className="bg-pink-500 border-pink-500 border text-white px-3 py-1.5 rounded text-[12px] font-medium">
                 New
               </strong>
             </h3>
@@ -96,10 +96,10 @@ export default function Features() {
             </p>
           </a>
 
-          <a className="block p-8 transition border border-gray-800 shadow-xl rounded-xl hover:shadow-indigo-500/10 hover:border-indigo-500/10">
+          <a className="block p-8 transition border border-gray-800 shadow-xl rounded-xl hover:shadow-pink-500/10 hover:border-pink-500/10">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="w-10 h-10 text-indigo-500"
+              className="w-10 h-10 text-pink-500"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
@@ -121,10 +121,10 @@ export default function Features() {
             </p>
           </a>
 
-          <a className="block p-8 transition border border-gray-800 shadow-xl rounded-xl hover:shadow-indigo-500/10 hover:border-indigo-500/10">
+          <a className="block p-8 transition border border-gray-800 shadow-xl rounded-xl hover:shadow-pink-500/10 hover:border-pink-500/10">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="w-10 h-10 text-indigo-500"
+              className="w-10 h-10 text-pink-500"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
@@ -146,10 +146,10 @@ export default function Features() {
             </p>
           </a>
 
-          <a className="block p-8 transition border border-gray-800 shadow-xl rounded-xl hover:shadow-indigo-500/10 hover:border-indigo-500/10">
+          <a className="block p-8 transition border border-gray-800 shadow-xl rounded-xl hover:shadow-pink-500/10 hover:border-pink-500/10">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="w-10 h-10 text-indigo-500"
+              className="w-10 h-10 text-pink-500"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
@@ -174,7 +174,7 @@ export default function Features() {
 
         <div className="mt-12 text-center">
           <a
-            className="inline-flex items-center px-8 py-3 mt-8 text-white bg-indigo-600 border border-indigo-600 rounded hover:bg-transparent active:text-indigo-500 focus:outline-none focus:ring"
+            className="inline-flex items-center px-8 py-3 mt-8 text-white bg-pink-600 border border-pink-600 rounded hover:bg-transparent active:text-pink-500 focus:outline-none focus:ring"
             href="/get-started"
           >
             <span className="text-sm font-medium"> Get Started </span>

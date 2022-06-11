@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Link from "next/dist/client/link";
 import { useRef } from "react";
 import Banner from "../components/Banner";
 import Features from "../components/Features";
@@ -13,12 +14,14 @@ export default function Home() {
       <Head>
         <title>Solodustries</title>
       </Head>
-      <div className="relative px-4 py-3 text-white bg-indigo-600 pr-14" ref={banner}>
+      <div className="relative px-4 py-3 text-white bg-pink-600 pr-14" ref={banner}>
         <p className="text-sm font-medium text-left sm:text-center">
           We now support Google Calendar Integration!{" "}
-          <a className="underline" href="/onboarding">
-            Get Started &rarr;{" "}
-          </a>
+          <Link href="/onboarding">
+            <a className="underline">
+              Get Started &rarr;{" "}
+            </a>
+          </Link>
         </p>
 
         <button

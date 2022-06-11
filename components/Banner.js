@@ -18,7 +18,7 @@ export default function Banner() {
 
             <div className="flex flex-wrap justify-center gap-4 mt-8">
               <Link href="/onboarding">
-                <a className="relative inline-flex items-center px-8 py-3 overflow-hidden text-white bg-indigo-600 rounded group active:bg-indigo-500 focus:outline-none focus:ring">
+                <a className="relative inline-flex items-center px-8 py-3 overflow-hidden text-white bg-pink-600 rounded group active:bg-pink-500 focus:outline-none focus:ring">
                   <span className="absolute right-0 transition-transform translate-x-full group-hover:-translate-x-4">
                     <svg
                       className="w-5 h-5"
@@ -43,7 +43,7 @@ export default function Banner() {
               </Link>
 
               <Link href="#features">
-                <a className="inline-block px-8 py-3 text-sm font-medium text-indigo-600 transition border border-current rounded hover:scale-110 hover:-rotate-2 active:text-indigo-500 focus:outline-none focus:ring">
+                <a className="inline-block px-8 py-3 text-sm font-medium text-pink-600 transition border border-current rounded hover:scale-110 hover:-rotate-2 active:text-pink-500 focus:outline-none focus:ring">
                   Learn More
                 </a>
               </Link>
