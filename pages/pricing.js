@@ -10,26 +10,26 @@ export default function Pricing() {
       <br />
       <br />    
       <div className="flex items-center justify-center">
-        <article class="block p-6 text-center shadow-xl bg-gray-800 rounded-xl">
-            <h5 class="text-3xl font-bold text-pink-600">Free Plan</h5>
+        <article className="block p-6 text-center shadow-xl bg-gray-800 rounded-xl">
+            <h5 className="text-3xl font-bold text-pink-600">Free Plan</h5>
 
-            <h6 class="mt-1 text-sm text-gray-200">Perfect for individuals who are just starting</h6>
+            <h6 className="mt-1 text-sm text-gray-200">Perfect for individuals who are just starting</h6>
 
-            <div class="mt-4 text-white">
+            <div className="mt-4 text-white">
             <h6>
-                <span class="text-2xl">$</span>
-                <span class="inline text-5xl font-bold">0</span>
-                <span class="text-xs">/ month</span>
+                <span className="text-2xl">$</span>
+                <span className="inline text-5xl font-bold">0</span>
+                <span className="text-xs">/ month</span>
             </h6>
 
-            <p class="text-xs text-gray-100 mt-0.5">Billed Annually</p>
+            <p className="text-xs text-gray-100 mt-0.5">Billed Annually</p>
             </div>
 
-            <ul class="mt-8 space-y-2.5 text-white">
+            <ul className="mt-8 space-y-2.5 text-white">
             <li>
                 <svg
                 xmlns="http://www.w3.org/2000/svg"
-                class="inline w-6 h-6 text-pink-600"
+                className="inline w-6 h-6 text-pink-600"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -47,7 +47,7 @@ export default function Pricing() {
             <li>
                 <svg
                 xmlns="http://www.w3.org/2000/svg"
-                class="inline w-6 h-6 text-pink-600"
+                className="inline w-6 h-6 text-pink-600"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -65,7 +65,7 @@ export default function Pricing() {
             <li>
                 <svg
                 xmlns="http://www.w3.org/2000/svg"
-                class="inline w-6 h-6 text-pink-600"
+                className="inline w-6 h-6 text-pink-600"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -83,7 +83,7 @@ export default function Pricing() {
             <li>
                 <svg
                 xmlns="http://www.w3.org/2000/svg"
-                class="inline w-6 h-6 text-pink-600"
+                className="inline w-6 h-6 text-pink-600"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -101,33 +101,33 @@ export default function Pricing() {
 
             <Link href="/onboarding?plan=1">
                 <a
-                    class="inline-block px-8 py-3 mt-8 text-sm font-medium text-white transition bg-pink-600 rounded hover:bg-pink-700 hover:shadow-xl active:bg-blue-500 focus:outline-none focus:ring"
+                    className="inline-block px-8 py-3 mt-8 text-sm font-medium text-white transition bg-pink-600 rounded hover:bg-pink-700 hover:shadow-xl active:bg-blue-500 focus:outline-none focus:ring"
                 >
                     Let's Get Started
                 </a>
             </Link>
         </article>
         &nbsp;&nbsp;&nbsp;
-        <article class="block p-6 text-center shadow-xl bg-gray-800 rounded-xl">
-            <h5 class="text-3xl font-bold text-pink-600">Basic Plan</h5>
+        <article className="block p-6 text-center shadow-xl bg-gray-800 rounded-xl">
+            <h5 className="text-3xl font-bold text-pink-600">Basic Plan</h5>
 
-            <h6 class="mt-1 text-sm text-gray-200">Perfect for Freelancers with some experience</h6>
+            <h6 className="mt-1 text-sm text-gray-200">Perfect for Freelancers with some experience</h6>
 
-            <div class="mt-4 text-white">
+            <div className="mt-4 text-white">
             <h6>
-                <span class="text-2xl">$</span>
-                <span class="inline text-5xl font-bold">9</span>
-                <span class="text-xs">/ month</span>
+                <span className="text-2xl">$</span>
+                <span className="inline text-5xl font-bold">9</span>
+                <span className="text-xs">/ month</span>
             </h6>
 
-            <p class="text-xs text-gray-100 mt-0.5">Billed Annually</p>
+            <p className="text-xs text-gray-100 mt-0.5">Billed Annually</p>
             </div>
 
-            <ul class="mt-8 space-y-2.5 text-white">
+            <ul className="mt-8 space-y-2.5 text-white">
             <li>
                 <svg
                 xmlns="http://www.w3.org/2000/svg"
-                class="inline w-6 h-6 text-pink-600"
+                className="inline w-6 h-6 text-pink-600"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -145,7 +145,7 @@ export default function Pricing() {
             <li>
                 <svg
                 xmlns="http://www.w3.org/2000/svg"
-                class="inline w-6 h-6 text-pink-600"
+                className="inline w-6 h-6 text-pink-600"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -163,7 +163,7 @@ export default function Pricing() {
             <li>
                 <svg
                 xmlns="http://www.w3.org/2000/svg"
-                class="inline w-6 h-6 text-pink-600"
+                className="inline w-6 h-6 text-pink-600"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -181,7 +181,7 @@ export default function Pricing() {
             <li>
                 <svg
                 xmlns="http://www.w3.org/2000/svg"
-                class="inline w-6 h-6 text-pink-600"
+                className="inline w-6 h-6 text-pink-600"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -199,33 +199,33 @@ export default function Pricing() {
 
             <Link href="/onboarding?plan=2">
                 <a
-                    class="inline-block px-8 py-3 mt-8 text-sm font-medium text-white transition bg-pink-600 rounded hover:bg-pink-700 hover:shadow-xl active:bg-blue-500 focus:outline-none focus:ring"
+                    className="inline-block px-8 py-3 mt-8 text-sm font-medium text-white transition bg-pink-600 rounded hover:bg-pink-700 hover:shadow-xl active:bg-blue-500 focus:outline-none focus:ring"
                 >
                     Let's Get Started
                 </a>
             </Link>
         </article>
         &nbsp;&nbsp;&nbsp;
-        <article class="block p-6 text-center shadow-xl bg-gray-800 rounded-xl">
-            <h5 class="text-3xl font-bold text-pink-600">Premium Plan</h5>
+        <article className="block p-6 text-center shadow-xl bg-gray-800 rounded-xl">
+            <h5 className="text-3xl font-bold text-pink-600">Premium Plan</h5>
 
-            <h6 class="mt-1 text-sm text-gray-200">Perfect for freelancers, who know what they're doing</h6>
+            <h6 className="mt-1 text-sm text-gray-200">Perfect for freelancers, who know what they're doing</h6>
 
-            <div class="mt-4 text-white">
+            <div className="mt-4 text-white">
             <h6>
-                <span class="text-2xl">$</span>
-                <span class="inline text-5xl font-bold">9</span>
-                <span class="text-xs">/ month</span>
+                <span className="text-2xl">$</span>
+                <span className="inline text-5xl font-bold">9</span>
+                <span className="text-xs">/ month</span>
             </h6>
 
-            <p class="text-xs text-gray-100 mt-0.5">Billed Annually</p>
+            <p className="text-xs text-gray-100 mt-0.5">Billed Annually</p>
             </div>
 
-            <ul class="mt-8 space-y-2.5 text-white">
+            <ul className="mt-8 space-y-2.5 text-white">
             <li>
                 <svg
                 xmlns="http://www.w3.org/2000/svg"
-                class="inline w-6 h-6 text-pink-600"
+                className="inline w-6 h-6 text-pink-600"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -243,7 +243,7 @@ export default function Pricing() {
             <li>
                 <svg
                 xmlns="http://www.w3.org/2000/svg"
-                class="inline w-6 h-6 text-pink-600"
+                className="inline w-6 h-6 text-pink-600"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -261,7 +261,7 @@ export default function Pricing() {
             <li>
                 <svg
                 xmlns="http://www.w3.org/2000/svg"
-                class="inline w-6 h-6 text-pink-600"
+                className="inline w-6 h-6 text-pink-600"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -279,7 +279,7 @@ export default function Pricing() {
             <li>
                 <svg
                 xmlns="http://www.w3.org/2000/svg"
-                class="inline w-6 h-6 text-pink-600"
+                className="inline w-6 h-6 text-pink-600"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -297,7 +297,7 @@ export default function Pricing() {
 
             <Link href="/onboarding?plan=3">
                 <a
-                    class="inline-block px-8 py-3 mt-8 text-sm font-medium text-white transition bg-pink-600 rounded hover:bg-pink-700 hover:shadow-xl active:bg-blue-500 focus:outline-none focus:ring"
+                    className="inline-block px-8 py-3 mt-8 text-sm font-medium text-white transition bg-pink-600 rounded hover:bg-pink-700 hover:shadow-xl active:bg-blue-500 focus:outline-none focus:ring"
                 >
                     Let's Get Started
                 </a>
