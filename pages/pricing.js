@@ -103,7 +103,7 @@ export default function Pricing() {
                 <a
                     className="inline-block px-8 py-3 mt-8 text-sm font-medium text-white transition bg-pink-600 rounded hover:bg-pink-700 hover:shadow-xl active:bg-blue-500 focus:outline-none focus:ring"
                 >
-                    Let's Get Started
+                    Let&apos;s Get Started
                 </a>
             </Link>
         </article>
@@ -201,7 +201,7 @@ export default function Pricing() {
                 <a
                     className="inline-block px-8 py-3 mt-8 text-sm font-medium text-white transition bg-pink-600 rounded hover:bg-pink-700 hover:shadow-xl active:bg-blue-500 focus:outline-none focus:ring"
                 >
-                    Let's Get Started
+                    Let&apos;s Get Started
                 </a>
             </Link>
         </article>
@@ -209,7 +209,7 @@ export default function Pricing() {
         <article className="block p-6 text-center shadow-xl bg-gray-800 rounded-xl">
             <h5 className="text-3xl font-bold text-pink-600">Premium Plan</h5>
 
-            <h6 className="mt-1 text-sm text-gray-200">Perfect for freelancers, who know what they're doing</h6>
+            <h6 className="mt-1 text-sm text-gray-200">Perfect for freelancers, who know what they&apos;re doing</h6>
 
             <div className="mt-4 text-white">
             <h6>
@@ -299,7 +299,7 @@ export default function Pricing() {
                 <a
                     className="inline-block px-8 py-3 mt-8 text-sm font-medium text-white transition bg-pink-600 rounded hover:bg-pink-700 hover:shadow-xl active:bg-blue-500 focus:outline-none focus:ring"
                 >
-                    Let's Get Started
+                    Let&apos;s Get Started
                 </a>
             </Link>
         </article>
