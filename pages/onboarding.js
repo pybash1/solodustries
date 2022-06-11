@@ -13,7 +13,7 @@ export default function Onboarding() {
         <title>Solodustries - Onboarding</title>
       </Head>
       <Navbar />
-      {plan == 1 ? <OnboardingForm /> : plan == 2 ? <OnboardingForm /> : plan == 3 ? <OnboardingForm /> :
+      {plan == null ? <OnboardingForm /> : plan == undefined ? <OnboardingForm /> : plan == 1 ? <OnboardingForm /> : plan == 2 ? <OnboardingForm /> : plan == 3 ? <OnboardingForm /> :
         <div className="flex items-center justify-center text-5xl font-bold text-white p-48">
           Invalid Plan Selected
         </div>
