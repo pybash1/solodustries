@@ -42,6 +42,12 @@ export default function Navbar(props) {
                 Pricing
               </a>
             </Link>
+            
+            <Link href="/freelancers">
+              <a className="block h-16 leading-[4rem] border-b-4 border-transparent hover:text-pink-700 hover:border-current">
+                Freelancers
+              </a>
+            </Link>
 
             <Link href="/login">
               <a className="block h-16 leading-[4rem] border-b-4 border-transparent hover:text-pink-700 hover:border-current">
