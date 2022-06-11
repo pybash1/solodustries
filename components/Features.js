@@ -8,8 +8,8 @@ export default function Features() {
           </h2>
 
           <p className="mt-4 text-gray-300">
-            Wanted to freelance, but couldn't because of these limitations? Well
-            don't worry anymore, cause we have got you covered!
+            Wanted to freelance, but couldn&apos;t because of these limitations? Well
+            don&apos;t worry anymore, cause we have got you covered!
           </p>
         </div>
 
@@ -37,7 +37,7 @@ export default function Features() {
             </h3>
 
             <p className="mt-1 text-sm text-gray-300">
-              Having trouble managing your money and expenses? Don't want to use another external app? Don't worry we have you covered!
+              Having trouble managing your money and expenses? Don&apos;t want to use another external app? Don&apos;t worry we have you covered!
             </p>
           </a>
 
