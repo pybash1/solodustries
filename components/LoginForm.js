@@ -53,7 +53,7 @@ export default function OnboardingForm() {
 
         <form onSubmit={handleSubmit} className="p-8 mt-6 mb-0 space-y-4 rounded-lg shadow-2xl">
           <div>
-            <label htmlhtmlFor="email" className="text-sm font-medium text-pink-500">
+            <label htmlFor="email" className="text-sm font-medium text-pink-500">
               Email
             </label>
 
@@ -88,7 +88,7 @@ export default function OnboardingForm() {
           </div>
 
           <div>
-            <label htmlhtmlFor="password" className="text-sm font-medium text-pink-500">
+            <label htmlFor="password" className="text-sm font-medium text-pink-500">
               Password
             </label>
 

@@ -7,6 +7,8 @@ import toast, { Toaster } from "react-hot-toast";
 export default function Search() {
   const router = useRouter();
   const { q } = router.query;
+  const formRef = useRef(null);
+  const [query, setQuery] = useState("");
 
   if (q) {
     return (
@@ -119,9 +121,6 @@ export default function Search() {
     );
   }
 
-  const formRef = useRef(null);
-
-  const [query, setQuery] = useState("");
 
   const handleSearch = (e) => {
     e.preventDefault();

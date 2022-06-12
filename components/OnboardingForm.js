@@ -73,7 +73,7 @@ export default function OnboardingForm() {
 
         <form onSubmit={handleSubmit} className="p-8 mt-6 mb-0 space-y-4 rounded-lg shadow-2xl" ref={step_0}>
           <div>
-            <label htmlhtmlFor="email" className="text-sm font-medium text-pink-500">
+            <label htmlFor="email" className="text-sm font-medium text-pink-500">
               Email
             </label>
 
@@ -108,7 +108,7 @@ export default function OnboardingForm() {
           </div>
 
           <div>
-            <label htmlhtmlFor="password" className="text-sm font-medium text-pink-500">
+            <label htmlFor="password" className="text-sm font-medium text-pink-500">
               Password
             </label>
 
@@ -167,7 +167,7 @@ export default function OnboardingForm() {
         </form>
         <form onSubmit={handleSubmit} className="p-8 mt-6 mb-0 space-y-4 rounded-lg shadow-2xl hidden" ref={step_1}>
           <div>
-            <label htmlhtmlFor="name" className="text-sm font-medium text-pink-500">
+            <label htmlFor="name" className="text-sm font-medium text-pink-500">
               Full Name
             </label>
 
@@ -202,7 +202,7 @@ export default function OnboardingForm() {
           </div>
 
           <div>
-            <label htmlhtmlFor="title" className="text-sm font-medium text-pink-500">
+            <label htmlFor="title" className="text-sm font-medium text-pink-500">
               Job Title
             </label>
 
@@ -262,7 +262,7 @@ export default function OnboardingForm() {
         <div className="max-w-lg px-4 mx-auto lg:px-8">
           <form className="grid grid-cols-6 gap-4" onSubmit={handleSubmit}>
             <div className="col-span-3">
-              <label className="block mb-1 text-sm text-pink-600 font-bold" htmlhtmlFor="first_name">
+              <label className="block mb-1 text-sm text-pink-600 font-bold" htmlFor="first_name">
                 First Name
               </label>
 
@@ -276,7 +276,7 @@ export default function OnboardingForm() {
             </div>
 
             <div className="col-span-3">
-              <label className="block mb-1 text-sm text-pink-600 font-bold" htmlhtmlFor="last_name">
+              <label className="block mb-1 text-sm text-pink-600 font-bold" htmlFor="last_name">
                 Last Name
               </label>
 
@@ -290,7 +290,7 @@ export default function OnboardingForm() {
             </div>
 
             <div className="col-span-6">
-              <label className="block mb-1 text-sm text-pink-600 font-bold" htmlhtmlFor="email">
+              <label className="block mb-1 text-sm text-pink-600 font-bold" htmlFor="email">
                 Email
               </label>
 
@@ -305,7 +305,7 @@ export default function OnboardingForm() {
             </div>
 
             <div className="col-span-6">
-              <label className="block mb-1 text-sm text-pink-600 font-bold" htmlhtmlFor="phone">
+              <label className="block mb-1 text-sm text-pink-600 font-bold" htmlFor="phone">
                 Phone
               </label>
 
@@ -326,7 +326,7 @@ export default function OnboardingForm() {
 
               <div className="-space-y-px rounded-lg shadow-sm">
                 <div>
-                  <label className="sr-only" htmlhtmlFor="card-number">Card Number</label>
+                  <label className="sr-only" htmlFor="card-number">Card Number</label>
 
                   <input
                     className="bg-gray-800 border-gray-800 relative rounded-t-lg w-full focus:z-10 text-sm p-2.5 placeholder-gray-400"
@@ -342,7 +342,7 @@ export default function OnboardingForm() {
 
                 <div className="flex -space-x-px">
                   <div className="flex-1">
-                    <label className="sr-only" htmlhtmlFor="card-expiration-date">
+                    <label className="sr-only" htmlFor="card-expiration-date">
                       Expiration Date
                     </label>
 
@@ -357,7 +357,7 @@ export default function OnboardingForm() {
                   </div>
 
                   <div className="flex-1">
-                    <label className="sr-only" htmlhtmlFor="card-cvc">CVC</label>
+                    <label className="sr-only" htmlFor="card-cvc">CVC</label>
 
                     <input
                       className="bg-gray-800 border-gray-800 relative rounded-br-lg w-full focus:z-10 text-sm p-2.5 placeholder-gray-400"
@@ -381,7 +381,7 @@ export default function OnboardingForm() {
 
               <div className="-space-y-px rounded-lg shadow-sm">
                 <div>
-                  <label className="sr-only" htmlhtmlFor="country">Country</label>
+                  <label className="sr-only" htmlFor="country">Country</label>
 
                   <select
                     className="bg-gray-800 border-gray-800 relative rounded-t-lg w-full focus:z-10 text-sm p-2.5"
@@ -405,7 +405,7 @@ export default function OnboardingForm() {
                 </div>
 
                 <div>
-                  <label className="sr-only" htmlhtmlFor="postal-code">
+                  <label className="sr-only" htmlFor="postal-code">
                     ZIP/Post Code
                   </label>
 

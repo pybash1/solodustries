@@ -27,11 +27,11 @@ export default function Profile() {
         }
       }} />
       <Navbar loggedin />
-      <div class="max-w-screen-xl px-4 py-16 mx-auto sm:px-6 lg:px-8 text-white">
-        <div class="max-w-lg mx-auto text-center">
-          <h1 class="text-2xl font-bold sm:text-3xl">Your Profile</h1>
+      <div className="max-w-screen-xl px-4 py-16 mx-auto sm:px-6 lg:px-8 text-white">
+        <div className="max-w-lg mx-auto text-center">
+          <h1 className="text-2xl font-bold sm:text-3xl">Your Profile</h1>
 
-          <p class="mt-4 text-gray-500">
+          <p className="mt-4 text-gray-500">
             You can view or edit your profile here. You must click the update
             button in order to update any information.
           </p>
@@ -39,36 +39,36 @@ export default function Profile() {
 
         <form
           onSubmit={handleUpdate}
-          class="max-w-md mx-auto mt-8 mb-0 space-y-4"
+          className="max-w-md mx-auto mt-8 mb-0 space-y-4"
         >
           <div>
-            <label for="name" class="sr-only">
+            <label htmlFor="name" className="sr-only">
               Name
             </label>
 
-            <div class="relative">
+            <div className="relative">
               <input
                 value={name}
                 onChange={(e) => {
                   setName(e.target.value);
                 }}
                 type="text"
-                class="w-full p-4 pr-12 text-sm bg-gray-800 border-gray-800 rounded-lg shadow-sm"
+                className="w-full p-4 pr-12 text-sm bg-gray-800 border-gray-800 rounded-lg shadow-sm"
                 placeholder="Enter Name"
               />
 
-              <span class="absolute inset-y-0 inline-flex items-center right-4">
+              <span className="absolute inset-y-0 inline-flex items-center right-4">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  class="w-5 h-5 text-gray-400"
+                  className="w-5 h-5 text-gray-400"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
                 >
                   <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
                     d="M16 12a4 4 0 10-8 0 4 4 0 008 0zm0 0v1.5a2.5 2.5 0 005 0V12a9 9 0 10-9 9m4.5-1.206a8.959 8.959 0 01-4.5 1.207"
                   />
                 </svg>
@@ -77,21 +77,21 @@ export default function Profile() {
           </div>
 
           <div>
-            <label for="title" class="sr-only">
+            <label htmlFor="title" className="sr-only">
               Job Title
             </label>
-            <div class="relative">
+            <div className="relative">
               <input
                 value={title}
                 onChange={(e) => {
                   setTitle(e.target.value);
                 }}
                 type="text"
-                class="w-full p-4 pr-12 text-sm bg-gray-800 border-gray-800 rounded-lg shadow-sm"
+                className="w-full p-4 pr-12 text-sm bg-gray-800 border-gray-800 rounded-lg shadow-sm"
                 placeholder="Enter job title"
               />
 
-              <span class="absolute inset-y-0 inline-flex items-center right-4">
+              <span className="absolute inset-y-0 inline-flex items-center right-4">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className="h-5 w-5 text-gray-400"
@@ -110,22 +110,22 @@ export default function Profile() {
             </div>
           </div>
           <div>
-            <label for="description" class="sr-only">
+            <label htmlFor="description" className="sr-only">
               Description
             </label>
-            <div class="relative">
+            <div className="relative">
               <input
                 value={description}
                 onChange={(e) => {
                   setDescription(e.target.value);
                 }}
                 type="text"
-                class="w-full p-4 pr-12 text-sm bg-gray-800 border-gray-800 rounded-lg shadow-sm"
+                className="w-full p-4 pr-12 text-sm bg-gray-800 border-gray-800 rounded-lg shadow-sm"
                 placeholder="Enter description"
                 maxLength={100}
               />
 
-              <span class="absolute inset-y-0 inline-flex items-center right-4">
+              <span className="absolute inset-y-0 inline-flex items-center right-4">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className="h-5 w-5 text-gray-400"
@@ -144,7 +144,7 @@ export default function Profile() {
           <div>
             <button
               type="submit"
-              class="inline-block px-5 py-3 text-sm font-medium text-white bg-pink-500 rounded-lg"
+              className="inline-block px-5 py-3 text-sm font-medium text-white bg-pink-500 rounded-lg"
             >
               Update
             </button>
