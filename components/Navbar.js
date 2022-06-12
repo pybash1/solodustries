@@ -31,64 +31,82 @@ export default function Navbar(props) {
 
         <div className="flex items-center justify-end flex-1">
           <nav className="hidden lg:uppercase lg:text-gray-500 lg:tracking-wide lg:font-bold lg:text-xs lg:space-x-4 lg:flex">
-            <Link href="/#features">
-              <a className="block h-16 leading-[4rem] border-b-4 border-transparent hover:text-pink-700 hover:border-current">
-                Features
-              </a>
-            </Link>
+            {!props.loggedin ? 
+            <>
+              <Link href="/#features">
+                <a className="block h-16 leading-[4rem] border-b-4 border-transparent hover:text-pink-700 hover:border-current">
+                  Features
+                </a>
+              </Link>
 
-            <Link href="/pricing">
-              <a className="block h-16 leading-[4rem] border-b-4 border-transparent hover:text-pink-700 hover:border-current">
-                Pricing
-              </a>
-            </Link>
-            
-            <Link href="/freelancers">
-              <a className="block h-16 leading-[4rem] border-b-4 border-transparent hover:text-pink-700 hover:border-current">
-                Freelancers
-              </a>
-            </Link>
+              <Link href="/pricing">
+                <a className="block h-16 leading-[4rem] border-b-4 border-transparent hover:text-pink-700 hover:border-current">
+                  Pricing
+                </a>
+              </Link>
+              
+              <Link href="/freelancers">
+                <a className="block h-16 leading-[4rem] border-b-4 border-transparent hover:text-pink-700 hover:border-current">
+                  Freelancers
+                </a>
+              </Link>
 
-            <Link href="/login">
-              <a className="block h-16 leading-[4rem] border-b-4 border-transparent hover:text-pink-700 hover:border-current">
-                Login
-              </a>
-            </Link>
+              <Link href="/login">
+                <a className="block h-16 leading-[4rem] border-b-4 border-transparent hover:text-pink-700 hover:border-current">
+                  Login
+                </a>
+              </Link>
 
-            <Link href="/onboarding">
-              <a className="block h-16 leading-[4rem] border-b-4 border-transparent hover:text-pink-700 hover:border-current">
-                Get Started
-              </a>
-            </Link>
+              <Link href="/onboarding">
+                <a className="block h-16 leading-[4rem] border-b-4 border-transparent hover:text-pink-700 hover:border-current">
+                  Get Started
+                </a>
+              </Link>
+            </>
+            :
+            <>
+              <Link href="/dashboard">
+                <a className="block h-16 leading-[4rem] border-b-4 border-transparent hover:text-pink-700 hover:border-current">
+                  Dashboard
+                </a>
+              </Link>
+
+              <Link href="/clients">
+                <a className="block h-16 leading-[4rem] border-b-4 border-transparent hover:text-pink-700 hover:border-current">
+                  Clients
+                </a>
+              </Link>
+
+              <Link href="/expenses">
+                <a className="block h-16 leading-[4rem] border-b-4 border-transparent hover:text-pink-700 hover:border-current">
+                  Expenses
+                </a>
+              </Link>
+              
+              <Link href="/projects">
+                <a className="block h-16 leading-[4rem] border-b-4 border-transparent hover:text-pink-700 hover:border-current">
+                  Projects
+                </a>
+              </Link>
+
+              <Link href="/resources">
+                <a className="block h-16 leading-[4rem] border-b-4 border-transparent hover:text-pink-700 hover:border-current">
+                  Resources
+                </a>
+              </Link>
+
+              <Link href="/calendar">
+                <a className="block h-16 leading-[4rem] border-b-4 border-transparent hover:text-pink-700 hover:border-current">
+                  Calendar
+                </a>
+              </Link>
+            </>
+            }
           </nav>
 
           {props.loggedin ? (
             <div className="flex items-center ml-8">
               <div className="flex items-center border-gray-600 divide-x divide-gray-600 border-x">
-                <span>
-                  <a
-                    href="/cart"
-                    className="block p-6 border-b-4 border-transparent hover:border-pink-700"
-                  >
-                    <svg
-                      className="w-4 h-4"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="2"
-                        d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"
-                      />
-                    </svg>
-
-                    <span className="sr-only">Cart</span>
-                  </a>
-                </span>
-
                 <span>
                   <a
                     href="/account"

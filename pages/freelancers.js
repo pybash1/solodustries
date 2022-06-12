@@ -1,4 +1,5 @@
 import Navbar from "../components/Navbar";
+import Link from "next/link";
 
 export default function Freelancers() {
   return (
@@ -35,7 +36,7 @@ export default function Freelancers() {
                 Hi, I am Free Lancer, and I can make websites for you at a very low price!
               </p>
               <br />
-              <a className="mt-8 font-bold">Let&apos;s Hire!</a>
+              <Link href="/add/test"><a className="mt-8 font-bold">Let&apos;s Hire!</a></Link>
             </div>
           </div>
         </p>
@@ -69,7 +70,7 @@ export default function Freelancers() {
                 Hi, I am Free Lancer, and I can make websites for you at a very low price!
               </p>
               <br />
-              <a className="mt-8 font-bold">Let&apos;s Hire!</a>
+              <Link href="/add/test"><a className="mt-8 font-bold">Let&apos;s Hire!</a></Link>
             </div>
           </div>
         </p>
@@ -103,7 +104,7 @@ export default function Freelancers() {
                 Hi, I am Free Lancer, and I can make websites for you at a very low price!
               </p>
               <br />
-              <a className="mt-8 font-bold">Let&apos;s Hire!</a>
+              <Link href="/add/test"><a className="mt-8 font-bold">Let&apos;s Hire!</a></Link>
             </div>
           </div>
         </p>
@@ -137,7 +138,7 @@ export default function Freelancers() {
                 Hi, I am Free Lancer, and I can make websites for you at a very low price!
               </p>
               <br />
-              <a className="mt-8 font-bold">Let&apos;s Hire!</a>
+              <Link href="/add/test"><a className="mt-8 font-bold">Let&apos;s Hire!</a></Link>
             </div>
           </div>
         </p>
@@ -171,7 +172,7 @@ export default function Freelancers() {
                 Hi, I am Free Lancer, and I can make websites for you at a very low price!
               </p>
               <br />
-              <a className="mt-8 font-bold">Let&apos;s Hire!</a>
+              <Link href="/add/test"><a className="mt-8 font-bold">Let&apos;s Hire!</a></Link>
             </div>
           </div>
         </p>
@@ -205,7 +206,7 @@ export default function Freelancers() {
                 Hi, I am Free Lancer, and I can make websites for you at a very low price!
               </p>
               <br />
-              <a className="mt-8 font-bold">Let&apos;s Hire!</a>
+              <Link href="/add/test"><a className="mt-8 font-bold">Let&apos;s Hire!</a></Link>
             </div>
           </div>
         </p>
@@ -239,7 +240,7 @@ export default function Freelancers() {
                 Hi, I am Free Lancer, and I can make websites for you at a very low price!
               </p>
               <br />
-              <a className="mt-8 font-bold">Let&apos;s Hire!</a>
+              <Link href="/add/test"><a className="mt-8 font-bold">Let&apos;s Hire!</a></Link>
             </div>
           </div>
         </p>
@@ -273,7 +274,7 @@ export default function Freelancers() {
                 Hi, I am Free Lancer, and I can make websites for you at a very low price!
               </p>
               <br />
-              <a className="mt-8 font-bold">Let&apos;s Hire!</a>
+              <Link href="/add/test"><a className="mt-8 font-bold">Let&apos;s Hire!</a></Link>
             </div>
           </div>
         </p>
@@ -307,7 +308,7 @@ export default function Freelancers() {
                 Hi, I am Free Lancer, and I can make websites for you at a very low price!
               </p>
               <br />
-              <a className="mt-8 font-bold">Let&apos;s Hire!</a>
+              <Link href="/add/test"><a className="mt-8 font-bold">Let&apos;s Hire!</a></Link>
             </div>
           </div>
         </p>
