@@ -29,7 +29,7 @@ export default function ClientForm() {
           <div className="p-8 bg-gray-800 rounded-lg shadow-lg lg:p-12 lg:col-span-3">
             <form action="" className="space-y-4">
               <div>
-                <label className="sr-only" for="name">
+                <label className="sr-only" htmlFor="name">
                   Name
                 </label>
                 <input
@@ -43,7 +43,7 @@ export default function ClientForm() {
 
               <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
                 <div>
-                  <label className="sr-only" for="email">
+                  <label className="sr-only" htmlFor="email">
                     Email
                   </label>
                   <input
@@ -56,7 +56,7 @@ export default function ClientForm() {
                 </div>
 
                 <div>
-                  <label className="sr-only" for="phone">
+                  <label className="sr-only" htmlFor="phone">
                     Phone
                   </label>
                   <input
@@ -68,7 +68,7 @@ export default function ClientForm() {
                 </div>
               </div>
               <div>
-                <label className="sr-only" for="message">
+                <label className="sr-only" htmlFor="message">
                   Message
                 </label>
                 <textarea

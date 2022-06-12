@@ -16,9 +16,11 @@ export default function Dashboard() {
       >
         <p className="text-sm font-medium text-left sm:text-center">
           You got a new order!{" "}
-          <a className="underline" href="/">
-            Check it out! &rarr;{" "}
-          </a>
+          <Link href="/">
+            <a className="underline">
+              Check it out! &rarr;{" "}
+            </a>
+          </Link>
         </p>
 
         <button
@@ -35,7 +37,7 @@ export default function Dashboard() {
             fill="currentColor"
           >
             <path
-              fill-rule="evenodd"
+              fillRule="evenodd"
               d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
               clipRule="evenodd"
             />
@@ -181,32 +183,32 @@ export default function Dashboard() {
           <div className="text-5xl pb-8 text-pink-500 font-bold">
             Add Resource
           </div>
-          <div class="max-w-screen-xl py-2">
-            <form action="" class="max-w-md mx-auto mt-8 mb-0 space-y-4">
+          <div className="max-w-screen-xl py-2">
+            <form action="" className="max-w-md mx-auto mt-8 mb-0 space-y-4">
               <div>
-                <label for="email" class="sr-only">
+                <label htmlFor="email" className="sr-only">
                   Email
                 </label>
 
-                <div class="relative">
+                <div className="relative">
                   <input
                     type="email"
-                    class="w-full p-4 pr-12 text-sm bg-gray-800 border-gray-800 rounded-lg shadow-sm"
+                    className="w-full p-4 pr-12 text-sm bg-gray-800 border-gray-800 rounded-lg shadow-sm"
                     placeholder="Enter email"
                   />
 
-                  <span class="absolute inset-y-0 inline-flex items-center right-4">
+                  <span className="absolute inset-y-0 inline-flex items-center right-4">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
-                      class="w-5 h-5 text-gray-400"
+                      className="w-5 h-5 text-gray-400"
                       fill="none"
                       viewBox="0 0 24 24"
                       stroke="currentColor"
                     >
                       <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
                         d="M16 12a4 4 0 10-8 0 4 4 0 008 0zm0 0v1.5a2.5 2.5 0 005 0V12a9 9 0 10-9 9m4.5-1.206a8.959 8.959 0 01-4.5 1.207"
                       />
                     </svg>
@@ -215,34 +217,34 @@ export default function Dashboard() {
               </div>
 
               <div>
-                <label for="password" class="sr-only">
+                <label htmlFor="password" className="sr-only">
                   Password
                 </label>
-                <div class="relative">
+                <div className="relative">
                   <input
                     type="password"
-                    class="w-full p-4 pr-12 text-sm bg-gray-800 border-gray-800 rounded-lg shadow-sm"
+                    className="w-full p-4 pr-12 text-sm bg-gray-800 border-gray-800 rounded-lg shadow-sm"
                     placeholder="Enter password"
                   />
 
-                  <span class="absolute inset-y-0 inline-flex items-center right-4">
+                  <span className="absolute inset-y-0 inline-flex items-center right-4">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
-                      class="w-5 h-5 text-gray-400"
+                      className="w-5 h-5 text-gray-400"
                       fill="none"
                       viewBox="0 0 24 24"
                       stroke="currentColor"
                     >
                       <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
                         d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
                       />
                       <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
                         d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
                       />
                     </svg>
@@ -250,17 +252,17 @@ export default function Dashboard() {
                 </div>
               </div>
 
-              <div class="flex items-center justify-between">
-                <p class="text-sm text-white">
+              <div className="flex items-center justify-between">
+                <p className="text-sm text-white">
                   No account?{" "}
-                  <a class="underline text-pink-500 underline-offset-2 hover:opacity-50 decoration-wavy" href="">
+                  <a className="underline text-pink-500 underline-offset-2 hover:opacity-50 decoration-wavy" href="">
                     Sign up
                   </a>
                 </p>
 
                 <button
                   type="submit"
-                  class="inline-block px-5 py-3 ml-3 text-sm font-medium text-white bg-pink-500 rounded-lg"
+                  className="inline-block px-5 py-3 ml-3 text-sm font-medium text-white bg-pink-500 rounded-lg"
                 >
                   Sign in
                 </button>
