@@ -12,16 +12,6 @@ export default function Expenses() {
         <table className="min-w-full text-sm divide-y bg-gray-800 divide-white">
           <thead>
             <tr>
-              <th className="sticky left-0 p-4 text-left bg-gray-800">
-                <label className="sr-only" htmlFor="row_all">
-                  Select All
-                </label>
-                <input
-                  className="w-5 h-5 border-gray-800 rounded"
-                  type="checkbox"
-                  id="row_all"
-                />
-              </th>
               <th className="p-4 font-medium text-left text-white whitespace-nowrap">
                 <div className="flex items-center">
                   Item
@@ -95,16 +85,6 @@ export default function Expenses() {
 
           <tbody className="divide-y divide-gray-100">
             <tr>
-              <td className="sticky left-0 p-4 bg-gray-800">
-                <label className="sr-only" htmlFor="row_1">
-                  Row 1
-                </label>
-                <input
-                  className="w-5 h-5 border-gray-800 rounded"
-                  type="checkbox"
-                  id="row_1"
-                />
-              </td>
               <td className="p-4 font-medium text-white whitespace-nowrap">
                 Solodustries Subscription
               </td>
@@ -122,16 +102,6 @@ export default function Expenses() {
             </tr>
 
             <tr>
-              <td className="sticky left-0 p-4 bg-gray-800">
-                <label className="sr-only" htmlFor="row_2">
-                  Row 2
-                </label>
-                <input
-                  className="w-5 h-5 border-gray-800 rounded"
-                  type="checkbox"
-                  id="row_2"
-                />
-              </td>
               <td className="p-4 font-medium text-white whitespace-nowrap">Project</td>
               <td className="p-4 text-gray-300 whitespace-nowrap">
                 Jane Doe
@@ -147,16 +117,6 @@ export default function Expenses() {
             </tr>
 
             <tr>
-              <td className="sticky left-0 p-4 bg-gray-800">
-                <label className="sr-only" htmlFor="row_3">
-                  Row 3
-                </label>
-                <input
-                  className="w-5 h-5 border-gray-800 rounded"
-                  type="checkbox"
-                  id="row_3"
-                />
-              </td>
               <td className="p-4 font-medium text-white whitespace-nowrap">Repl.it hacker plan</td>
               <td className="p-4 text-gray-300 whitespace-nowrap">
                 Gary Barlow

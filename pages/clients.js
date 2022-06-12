@@ -12,16 +12,7 @@ export default function Clients() {
         <table className="min-w-full text-sm divide-y bg-gray-800 divide-white">
           <thead>
             <tr>
-              <th className="sticky left-0 p-4 text-left bg-gray-800">
-                <label className="sr-only" htmlFor="row_all">
-                  Select All
-                </label>
-                <input
-                  className="w-5 h-5 border-gray-800 rounded"
-                  type="checkbox"
-                  id="row_all"
-                />
-              </th>
+              
               <th className="p-4 font-medium text-left text-white whitespace-nowrap">
                 <div className="flex items-center">
                   Name
@@ -112,16 +103,6 @@ export default function Clients() {
 
           <tbody className="divide-y divide-gray-100">
             <tr>
-              <td className="sticky left-0 p-4 bg-gray-800">
-                <label className="sr-only" htmlFor="row_1">
-                  Row 1
-                </label>
-                <input
-                  className="w-5 h-5 border-gray-800 rounded"
-                  type="checkbox"
-                  id="row_1"
-                />
-              </td>
               <td className="p-4 font-medium text-white whitespace-nowrap">
                 John Doe
               </td>
@@ -142,16 +123,6 @@ export default function Clients() {
             </tr>
 
             <tr>
-              <td className="sticky left-0 p-4 bg-gray-800">
-                <label className="sr-only" htmlFor="row_2">
-                  Row 2
-                </label>
-                <input
-                  className="w-5 h-5 border-gray-800 rounded"
-                  type="checkbox"
-                  id="row_2"
-                />
-              </td>
               <td className="p-4 font-medium text-white whitespace-nowrap">Jane Doe</td>
               <td className="p-4 text-gray-300 whitespace-nowrap">
                 jane.doe@email.com
@@ -170,16 +141,6 @@ export default function Clients() {
             </tr>
 
             <tr>
-              <td className="sticky left-0 p-4 bg-gray-800">
-                <label className="sr-only" htmlFor="row_3">
-                  Row 3
-                </label>
-                <input
-                  className="w-5 h-5 border-gray-800 rounded"
-                  type="checkbox"
-                  id="row_3"
-                />
-              </td>
               <td className="p-4 font-medium text-white whitespace-nowrap">Gary Barlow</td>
               <td className="p-4 text-gray-300 whitespace-nowrap">
                 gary.barlow@email.com

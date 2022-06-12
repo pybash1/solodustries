@@ -85,12 +85,10 @@ export default function Navbar(props) {
                 </a>
               </Link>
               
-              <Link href="/projects">
-                <a className="block h-16 leading-[4rem] border-b-4 border-transparent hover:text-pink-700 hover:border-current">
-                  Projects
-                </a>
-              </Link>
-
+              <a href="https://trello.com/" target="blank_" rel="noopener noreferrer" className="block h-16 leading-[4rem] border-b-4 border-transparent hover:text-pink-700 hover:border-current">
+                Projects
+              </a>
+              
               <Link href="/resources">
                 <a className="block h-16 leading-[4rem] border-b-4 border-transparent hover:text-pink-700 hover:border-current">
                   Resources
@@ -108,27 +106,28 @@ export default function Navbar(props) {
             <div className="flex items-center ml-8">
               <div className="flex items-center border-gray-600 divide-x divide-gray-600 border-x">
                 <span>
-                  <a
-                    href="/account"
-                    className="block p-6 border-b-4 border-transparent hover:border-pink-700"
-                  >
-                    <svg
-                      className="w-4 h-4"
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
+                  <Link href="/profile">
+                    <a
+                      className="block p-6 border-b-4 border-transparent hover:border-pink-700"
                     >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="2"
-                        d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
-                      />
-                    </svg>
+                      <svg
+                        className="w-4 h-4"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="2"
+                          d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
+                        />
+                      </svg>
 
-                    <span className="sr-only"> Account </span>
-                  </a>
+                      <span className="sr-only"> Account </span>
+                    </a>
+                  </Link>
                 </span>
 
                 <span className="hidden sm:block">
