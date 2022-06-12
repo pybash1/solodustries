@@ -1,5 +1,6 @@
 import Navbar from "../components/Navbar";
 import Head from "next/head";
+import Link from "next/link";
 import { useRef } from "react";
 
 export default function Dashboard() {
