@@ -132,27 +132,28 @@ export default function Navbar(props) {
                 </span>
 
                 <span className="hidden sm:block">
-                  <a
-                    href="/search"
-                    className="block p-6 border-b-4 border-transparent hover:border-pink-700"
-                  >
-                    <svg
-                      className="w-4 h-4"
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
+                  <Link href="/search">
+                    <a
+                      className="block p-6 border-b-4 border-transparent hover:border-pink-700"
                     >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="2"
-                        d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-                      />
-                    </svg>
+                      <svg
+                        className="w-4 h-4"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="2"
+                          d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                        />
+                      </svg>
 
-                    <span className="sr-only"> Search </span>
-                  </a>
+                      <span className="sr-only"> Search </span>
+                    </a>
+                  </Link>
                 </span>
               </div>
             </div>
