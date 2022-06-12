@@ -17,7 +17,7 @@ export default function Banner() {
             </p>
 
             <div className="flex flex-wrap justify-center gap-4 mt-8">
-              <Link href="/onboarding">
+              <Link href="/pricing">
                 <a className="relative inline-flex items-center px-8 py-3 overflow-hidden text-white bg-pink-600 rounded group active:bg-pink-500 focus:outline-none focus:ring">
                   <span className="absolute right-0 transition-transform translate-x-full group-hover:-translate-x-4">
                     <svg

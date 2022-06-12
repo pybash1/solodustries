@@ -18,9 +18,7 @@ export default function Dashboard() {
         <p className="text-sm font-medium text-left sm:text-center">
           You got a new order!{" "}
           <Link href="/">
-            <a className="underline">
-              Check it out! &rarr;{" "}
-            </a>
+            <a className="underline">Check it out! &rarr; </a>
           </Link>
         </p>
 
@@ -50,9 +48,9 @@ export default function Dashboard() {
         Welcome
       </div>
       <div className="grid grid-cols-2 gap-10 p-20">
-        <div className="bg-white bg-opacity-25 backdrop-blur-lg p-10 rounded-lg">
+        <div className="bg-gray-800 backdrop-blur-lg p-10 rounded-lg">
           <div className="text-5xl pb-8 text-pink-500 font-bold">Money</div>
-          <article className="relative px-6 pt-12 pb-6 bg-gray-800 backdrop-blur-md bg-opacity-25 rounded-lg shadow-sm">
+          <article className="relative px-6 pt-12 pb-6 bg-gray-500 backdrop-blur-md bg-opacity-25 rounded-lg shadow-sm">
             <p className="text-sm font-medium text-gray-300">Expense</p>
 
             <p className="inline-flex items-end mt-1">
@@ -82,7 +80,7 @@ export default function Dashboard() {
             </p>
           </article>
           <br />
-          <article className="relative px-6 pt-12 pb-6 bg-gray-800 backdrop-blur-md bg-opacity-25 rounded-lg shadow-sm">
+          <article className="relative px-6 pt-12 pb-6 bg-gray-500 backdrop-blur-md bg-opacity-25 rounded-lg shadow-sm">
             <p className="text-sm font-medium text-gray-300">Income</p>
 
             <p className="inline-flex items-end mt-1">
@@ -112,9 +110,9 @@ export default function Dashboard() {
             </p>
           </article>
         </div>
-        <div className="bg-white bg-opacity-25 backdrop-blur-lg p-10 rounded-lg">
+        <div className="bg-gray-800 backdrop-blur-lg p-10 rounded-lg">
           <div className="text-5xl pb-8 text-pink-500 font-bold">Clients</div>
-          <article className="relative px-6 pt-12 pb-6 bg-gray-800 backdrop-blur-md bg-opacity-25 rounded-lg shadow-sm">
+          <article className="relative px-6 pt-12 pb-6 bg-gray-500 backdrop-blur-md bg-opacity-25 rounded-lg shadow-sm">
             <p className="text-sm font-medium text-gray-300">Client #4</p>
 
             <p className="inline-flex items-end mt-1">
@@ -131,7 +129,7 @@ export default function Dashboard() {
             </p>
           </article>
           <br />
-          <article className="relative px-6 pt-12 pb-6 bg-gray-800 backdrop-blur-md bg-opacity-25 rounded-lg shadow-sm">
+          <article className="relative px-6 pt-12 pb-6 bg-gray-500 backdrop-blur-md bg-opacity-25 rounded-lg shadow-sm">
             <p className="text-sm font-medium text-gray-300">Client #3</p>
 
             <p className="inline-flex items-end mt-1">
@@ -148,9 +146,9 @@ export default function Dashboard() {
             </p>
           </article>
         </div>
-        <div className="bg-white bg-opacity-25 backdrop-blur-lg p-10 rounded-lg">
+        <div className="bg-gray-800 backdrop-blur-lg p-10 rounded-lg">
           <div className="text-5xl pb-8 text-pink-500 font-bold">Calendar</div>
-          <article className="relative px-6 pt-12 pb-6 bg-gray-800 backdrop-blur-md bg-opacity-25 rounded-lg shadow-sm">
+          <article className="relative px-6 pt-12 pb-6 bg-gray-500 backdrop-blur-md bg-opacity-25 rounded-lg shadow-sm">
             <p className="text-sm font-medium text-gray-300">13:00 - 14:00</p>
 
             <p className="inline-flex items-end mt-1">
@@ -165,7 +163,7 @@ export default function Dashboard() {
             </p>
           </article>
           <br />
-          <article className="relative px-6 pt-12 pb-6 bg-gray-800 backdrop-blur-md bg-opacity-25 rounded-lg shadow-sm">
+          <article className="relative px-6 pt-12 pb-6 bg-gray-500 backdrop-blur-md bg-opacity-25 rounded-lg shadow-sm">
             <p className="text-sm font-medium text-gray-300">16:00 - 17:00</p>
 
             <p className="inline-flex items-end mt-1">
@@ -180,7 +178,7 @@ export default function Dashboard() {
             </p>
           </article>
         </div>
-        <div className="bg-white bg-opacity-25 backdrop-blur-lg p-10 rounded-lg">
+        <div className="bg-gray-800 backdrop-blur-lg p-10 rounded-lg">
           <div className="text-5xl pb-8 text-pink-500 font-bold">
             Add Resource
           </div>
@@ -188,29 +186,29 @@ export default function Dashboard() {
             <form action="" className="max-w-md mx-auto mt-8 mb-0 space-y-4">
               <div>
                 <label htmlFor="email" className="sr-only">
-                  Email
+                  Name
                 </label>
 
                 <div className="relative">
                   <input
                     type="email"
-                    className="w-full p-4 pr-12 text-sm bg-gray-800 border-gray-800 rounded-lg shadow-sm"
-                    placeholder="Enter email"
+                    className="w-full p-4 pr-12 text-sm text-white bg-gray-700 border-gray-800 rounded-lg shadow-sm"
+                    placeholder="Enter name"
                   />
 
                   <span className="absolute inset-y-0 inline-flex items-center right-4">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
-                      className="w-5 h-5 text-gray-400"
+                      className="h-5 w-5 text-gray-400"
                       fill="none"
                       viewBox="0 0 24 24"
                       stroke="currentColor"
+                      strokeWidth={2}
                     >
                       <path
                         strokeLinecap="round"
                         strokeLinejoin="round"
-                        strokeWidth="2"
-                        d="M16 12a4 4 0 10-8 0 4 4 0 008 0zm0 0v1.5a2.5 2.5 0 005 0V12a9 9 0 10-9 9m4.5-1.206a8.959 8.959 0 01-4.5 1.207"
+                        d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
                       />
                     </svg>
                   </span>
@@ -218,54 +216,40 @@ export default function Dashboard() {
               </div>
 
               <div>
-                <label htmlFor="password" className="sr-only">
-                  Password
+                <label htmlFor="link" className="sr-only">
+                  Resource Link
                 </label>
                 <div className="relative">
                   <input
-                    type="password"
-                    className="w-full p-4 pr-12 text-sm bg-gray-800 border-gray-800 rounded-lg shadow-sm"
-                    placeholder="Enter password"
+                    type="url"
+                    className="w-full p-4 pr-12 text-sm text-white bg-gray-700 border-gray-800 rounded-lg shadow-sm"
+                    placeholder="Enter link"
                   />
 
                   <span className="absolute inset-y-0 inline-flex items-center right-4">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
-                      className="w-5 h-5 text-gray-400"
+                      className="h-5 w-5 text-gray-400"
                       fill="none"
                       viewBox="0 0 24 24"
                       stroke="currentColor"
+                      strokeWidth={2}
                     >
                       <path
                         strokeLinecap="round"
                         strokeLinejoin="round"
-                        strokeWidth="2"
-                        d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
-                      />
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="2"
-                        d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
+                        d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"
                       />
                     </svg>
                   </span>
                 </div>
               </div>
-
-              <div className="flex items-center justify-between">
-                <p className="text-sm text-white">
-                  No account?{" "}
-                  <a className="underline text-pink-500 underline-offset-2 hover:opacity-50 decoration-wavy" href="">
-                    Sign up
-                  </a>
-                </p>
-
+              <div>
                 <button
                   type="submit"
-                  className="inline-block px-5 py-3 ml-3 text-sm font-medium text-white bg-pink-500 rounded-lg"
+                  className="inline-block px-5 py-3 text-sm font-medium text-white bg-pink-500 rounded-lg"
                 >
-                  Sign in
+                  Add Resource
                 </button>
               </div>
             </form>

@@ -22,11 +22,13 @@ export default function Navbar(props) {
             </svg>
           </button>
 
-          <a href="" className="flex">
-            <span className="w-32 h-10 bg-gray-900 rounded-lg flex items-center justify-center">
-              SoloDustries
-            </span>
-          </a>
+          <Link href="/">
+            <a className="flex">
+              <span className="w-32 h-10 bg-gray-900 rounded-lg flex items-center justify-center">
+                SoloDustries
+              </span>
+            </a>
+          </Link>
         </div>
 
         <div className="flex items-center justify-end flex-1">
@@ -95,11 +97,9 @@ export default function Navbar(props) {
                 </a>
               </Link>
 
-              <Link href="/calendar">
-                <a className="block h-16 leading-[4rem] border-b-4 border-transparent hover:text-pink-700 hover:border-current">
-                  Calendar
-                </a>
-              </Link>
+              <a href="https://calendar.google.com/" target="blank_" rel="noreferrer noopener" className="block h-16 leading-[4rem] border-b-4 border-transparent hover:text-pink-700 hover:border-current">
+                Calendar
+              </a>
             </>
             }
           </nav>
