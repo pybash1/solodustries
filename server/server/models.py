@@ -24,9 +24,9 @@ class Client(BaseModel):
 
 class Expense(BaseModel):
     item: str
-    client: NoneType | str
+    client: str
     type: str
-    amount: float
+    amount: str
 
 
 class Resource(BaseModel):

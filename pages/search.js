@@ -1,14 +1,40 @@
 import Navbar from "../components/Navbar";
 import Head from "next/head";
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import toast, { Toaster } from "react-hot-toast";
+import { checkCookies, getCookie } from "cookies-next";
 
 export default function Search() {
   const router = useRouter();
   const { q } = router.query;
   const formRef = useRef(null);
   const [query, setQuery] = useState("");
+
+  const API_URL =
+    process.env.NODE_ENV === "development"
+      ? "http://localhost:8000"
+      : "https://solodustries.up.railway.app";
+
+  useEffect(() => {
+    if (checkCookies("access_token")) {
+      fetch(API_URL + "/checkjwt", {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${getCookie("access_token")}`,
+        },
+      }).then((res) =>
+        res.json().then((data) => {
+          if (!data.valid) {
+            router.push("/");
+          }
+        })
+      );
+    } else {
+      router.push("/");
+    }
+  });
 
   if (q) {
     return (

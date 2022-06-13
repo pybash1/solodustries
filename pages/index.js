@@ -1,13 +1,39 @@
 import Head from "next/head";
 import Link from "next/dist/client/link";
-import { useRef } from "react";
+import { useRef, useEffect } from "react";
 import Banner from "../components/Banner";
 import Features from "../components/Features";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
+import { checkCookies, getCookie } from "cookies-next";
+import { useRouter } from "next/router";
 
 export default function Home() {
   const banner = useRef(null);
+  const router = useRouter();
+
+  const API_URL =
+    process.env.NODE_ENV === "development"
+      ? "http://localhost:8000"
+      : "https://solodustries.up.railway.app";
+
+  useEffect(() => {
+    if (checkCookies("access_token")) {
+      fetch(API_URL + "/checkjwt", {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${getCookie("access_token")}`,
+        },
+      }).then(res => res.json().then(
+        data => {
+          if (data.valid) {
+            router.push("/dashboard");
+          }
+        }
+      ))
+    }
+  })
 
   return (
     <div>

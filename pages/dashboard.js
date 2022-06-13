@@ -1,10 +1,63 @@
 import Navbar from "../components/Navbar";
 import Head from "next/head";
 import Link from "next/link";
-import { useRef } from "react";
+import { useRef, useEffect, useState } from "react";
+import { useRouter } from "next/router";
+import { checkCookies, getCookie } from "cookies-next";
 
 export default function Dashboard() {
   const popup = useRef(null);
+  const router = useRouter();
+
+  const [item, setItem] = useState("")
+  const [type, setType] = useState("")
+  const [client, setClient] = useState("")
+
+  const [expenses, setExpenses] = useState(0)
+  const [income, setIncome] = useState(0)
+
+  const API_URL =
+    process.env.NODE_ENV === "development"
+      ? "http://localhost:8000"
+      : "https://solodustries.up.railway.app";
+
+  useEffect(() => {
+    if (checkCookies("access_token")) {
+      fetch(API_URL + "/checkjwt", {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${getCookie("access_token")}`,
+        },
+      }).then((res) =>
+        res.json().then((data) => {
+          if (!data.valid) {
+            router.push("/");
+          }
+        })
+      );
+    } else {
+      router.push("/");
+    }
+  });
+
+  // useEffect(() => {
+  //   fetch(API_URL+"/expenses", {
+  //     method: "GET",
+  //     headers: {
+  //       "Content-Type": "application/json",
+  //       Authorization: `Bearer ${getCookie("access_token")}`
+  //     }
+  //   }).then(res => res.json().then(data => {
+  //     data.forEach(item => {
+  //       if (item.type === "Expense") {
+  //         setExpenses(expenses+parseInt(item.amount.remove("$")))
+  //       } else {
+  //         setIncome(income+parseInt(item.amount.remove($)))
+  //       }
+  //     })
+  //   }))
+  // })
 
   return (
     <div className="bg-gray-900 min-h-screen">
@@ -55,9 +108,9 @@ export default function Dashboard() {
 
             <p className="inline-flex items-end mt-1">
               <span className="text-2xl font-medium leading-none text-white">
-                $240.94
+                ${expenses}
               </span>
-              <span className="ml-1 text-xs text-white">from $321.23</span>
+              <span className="ml-1 text-xs text-white">from $0.00</span>
             </p>
 
             <p className="absolute inline-flex p-1 text-red-600 bg-red-100 rounded top-4 right-4">
@@ -76,7 +129,7 @@ export default function Dashboard() {
                 />
               </svg>
 
-              <span className="ml-1.5 text-xs font-medium">75.00%</span>
+              <span className="ml-1.5 text-xs font-medium">100.00%</span>
             </p>
           </article>
           <br />
@@ -85,9 +138,9 @@ export default function Dashboard() {
 
             <p className="inline-flex items-end mt-1">
               <span className="text-2xl font-medium leading-none text-white">
-                $404.32
+                ${income}
               </span>
-              <span className="ml-1 text-xs text-gray-300">from $240.94</span>
+              <span className="ml-1 text-xs text-gray-300">from $0.00</span>
             </p>
 
             <p className="absolute inline-flex p-1 text-green-600 bg-green-100 rounded top-4 right-4">
@@ -106,7 +159,7 @@ export default function Dashboard() {
                 />
               </svg>
 
-              <span className="ml-1.5 text-xs font-medium">59.59%</span>
+              <span className="ml-1.5 text-xs font-medium">100.00%</span>
             </p>
           </article>
         </div>

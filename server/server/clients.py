@@ -13,24 +13,24 @@ db = ClientDB(os.getenv("DETA_KEY"), "solodustries-clients")
 
 @router.get("/clients")
 def get_clients(user=Depends(manager)):
-    return db.get_logs(user["key"])
+    return db.get_clients(user["key"])
 
 
 @router.post("/create/client")
 def create_client(client: Client, user=Depends(manager)):
-    return db.create_update_log(user["key"], client, str(int(uuid.uuid4())))
+    return db.create_update_client(user["key"], client, str(int(uuid.uuid4())))
 
 
 @router.put("/update/client/{cid}")
 def update_client(cid: str, client: Client, user=Depends(manager)):
-    return db.create_update_log(user["key"], client, cid)
+    return db.create_update_client(user["key"], client, cid)
 
 
-@router.delete("/delete/client/{lid}")
+@router.delete("/delete/client/{cid}")
 def delete_client(cid: str, _=Depends(manager)):
-    return db.delete_log(cid)
+    return db.delete_client(cid)
 
 
 @router.get("/log/{cid}")
 def get_client(cid: str, _=Depends(manager)):
-    return db.get_log(cid)
+    return db.get_client(cid)

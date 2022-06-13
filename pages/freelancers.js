@@ -1,7 +1,37 @@
 import Navbar from "../components/Navbar";
 import Link from "next/link";
+import { useRouter } from "next/router";
+import { useEffect } from "react";
+import { checkCookies, getCookie } from "cookies-next";
 
 export default function Freelancers() {
+  const router = useRouter();
+
+  const API_URL =
+    process.env.NODE_ENV === "development"
+      ? "http://localhost:8000"
+      : "https://solodustries.up.railway.app";
+
+  useEffect(() => {
+    if (checkCookies("access_token")) {
+      fetch(API_URL + "/checkjwt", {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${getCookie("access_token")}`,
+        },
+      }).then((res) =>
+        res.json().then((data) => {
+          if (!data.valid) {
+            router.push("/");
+          }
+        })
+      );
+    } else {
+      router.push("/");
+    }
+  });
+
   return (
     <div className="bg-gray-900 min-h-screen">
       <Navbar />

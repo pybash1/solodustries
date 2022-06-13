@@ -1,7 +1,109 @@
 import Navbar from "../components/Navbar";
 import Head from "next/head";
+import { useRouter } from "next/router";
+import { useEffect, useState } from "react";
+import { checkCookies, getCookie } from "cookies-next";
 
 export default function Expenses() {
+  const router = useRouter();
+  const [expenses, setExpenses] = useState([]);
+
+  const [item, setItem] = useState("")
+  const [type, setType] = useState("")
+  const [client, setClient] = useState("")
+  const [amount, setAmount] = useState("")
+
+  const API_URL =
+    process.env.NODE_ENV === "development"
+      ? "http://localhost:8000"
+      : "https://solodustries.up.railway.app";
+
+  useEffect(() => {
+    if (checkCookies("access_token")) {
+      fetch(API_URL + "/checkjwt", {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${getCookie("access_token")}`,
+        },
+      }).then((res) =>
+        res.json().then((data) => {
+          if (!data.valid) {
+            router.push("/");
+          }
+        })
+      );
+    } else {
+      router.push("/");
+    }
+  });
+
+  useEffect(() => {
+    fetch(API_URL + "/expenses", {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${getCookie("access_token")}`,
+      },
+    }).then((res) =>
+      res.json().then((data) => {
+        setExpenses(data);
+      })
+    );
+  }, []);
+
+  const addExpense = () => {
+    fetch(API_URL + "/create/expense", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${getCookie("access_token")}`,
+      },
+      body: JSON.stringify({
+        "item": item,
+        "client": client || "None",
+        "type": type,
+        "amount": "$"+amount
+      }),
+    }).then((res) =>
+      res.json().then((data) => {
+        fetch(API_URL + "/expenses", {
+          method: "GET",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${getCookie("access_token")}`,
+          },
+        }).then((res) =>
+          res.json().then((data) => {
+            setExpenses(data);
+          })
+        );
+      })
+    );
+  };
+
+  const deleteExpense = (cid) => {
+    fetch(API_URL+"/delete/expense/"+cid, {
+      method: "DELETE",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${getCookie("access_token")}`
+      }
+    }).then(res => res.json().then(data => {
+      fetch(API_URL + "/expenses", {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${getCookie("access_token")}`,
+        },
+      }).then((res) =>
+        res.json().then((data) => {
+          setExpenses(data);
+        })
+      );
+    }))
+  }
+
   return (
     <div className="bg-gray-900 min-h-screen">
         <Head>
@@ -80,54 +182,103 @@ export default function Expenses() {
                   </svg>
                 </div>
               </th>
+              <th></th>
+              <th></th>
             </tr>
           </thead>
 
           <tbody className="divide-y divide-gray-100">
+            {expenses.map(expense => (
             <tr>
               <td className="p-4 font-medium text-white whitespace-nowrap">
-                Solodustries Subscription
+                {expense.expense.item}
               </td>
               <td className="p-4 text-gray-300 whitespace-nowrap">
-                None
+                {expense.expense.client}
               </td>
               <td className="p-4 text-gray-300 whitespace-nowrap">
                 <strong className="bg-red-100 text-red-700 px-3 py-1.5 rounded text-xs font-medium">
-                  Expense
+                  {expense.expense.type}
                 </strong>
               </td>
               <td className="p-4 text-gray-300 whitespace-nowrap">
-                $45.50
+                {expense.expense.amount}
               </td>
-            </tr>
-
+              <td className="p-4 text-pink-300 whitespace-nowrap"><button onClick={(e) => {deleteExpense(expense.key)}}>Delete</button></td>
+              <td className="p-4 text-pink-300 whitespace-nowrap"><button>Edit</button></td>
+            </tr>))}
             <tr>
-              <td className="p-4 font-medium text-white whitespace-nowrap">Project</td>
-              <td className="p-4 text-gray-300 whitespace-nowrap">
-                Jane Doe
-              </td>
-              <td className="p-4 whitespace-nowrap">
-                <strong className="bg-green-100 text-green-700 px-3 py-1.5 rounded text-xs font-medium">
-                  Income
-                </strong>
-              </td>
-              <td className="p-4 text-gray-300 whitespace-nowrap">
-                $129.00
-              </td>
-            </tr>
+              <td className="p-4 font-medium text-white whitespace-nowrap">
+                <div class="relative">
+                  <label class="sr-only" for="item">
+                    {" "}
+                    Item{" "}
+                  </label>
 
-            <tr>
-              <td className="p-4 font-medium text-white whitespace-nowrap">Repl.it hacker plan</td>
-              <td className="p-4 text-gray-300 whitespace-nowrap">
-                Gary Barlow
+                  <input
+                    value={item}
+                    onChange={(e) => setItem(e.target.value)}
+                    class="w-full py-3 pl-3 pr-12 text-sm border-2 bg-gray-900 border-gray-900 rounded"
+                    id="item"
+                    type="text"
+                    placeholder="Item"
+                  />
+                </div>
               </td>
               <td className="p-4 text-gray-300 whitespace-nowrap">
-                <strong className="bg-amber-100 text-amber-700 px-3 py-1.5 rounded text-xs font-medium">
-                  Expense
-                </strong>
+                <div class="relative">
+                  <label class="sr-only" for="client">
+                    {" "}
+                    Client{" "}
+                  </label>
+
+                  <input
+                    value={client}
+                    onChange={(e) => setClient(e.target.value)}
+                    class="w-full py-3 pl-3 pr-12 text-sm border-2 bg-gray-900 border-gray-900 rounded"
+                    id="client"
+                    type="text"
+                    placeholder="Client"
+                  />
+                </div>
               </td>
               <td className="p-4 text-gray-300 whitespace-nowrap">
-                $50.00
+                <select
+                  id="countries"
+                  class="text-sm rounded-lg block w-full p-2.5 bg-gray-900 border-gray-900 placeholder-gray-400 text-white "
+                  value={type}
+                  onChange={(e) => {
+                    setType(e.target.value);
+                  }}
+                >
+                  <option>Expense</option>
+                  <option>Income</option>
+                </select>
+              </td>
+              <td className="p-4 text-gray-300 whitespace-nowrap">
+                <div class="relative">
+                  <label class="sr-only" for="amount">
+                    {" "}
+                    Amount{" "}
+                  </label>
+
+                  <input
+                    value={amount}
+                    onChange={(e) => setAmount(e.target.value)}
+                    class="w-full py-3 pl-3 pr-12 text-sm border-2 bg-gray-900 border-gray-900 rounded"
+                    id="amount"
+                    type="number"
+                    placeholder="Amount"
+                  />
+                </div>
+              </td>
+              <td className="p-4 text-gray-300 whitespace-nowrap">
+                <button
+                  onClick={addExpense}
+                  class="inline-block px-12 py-3 text-sm font-medium text-white bg-pink-600 border border-pink-600 rounded active:text-pink-500 hover:bg-transparent hover:text-pink-600 focus:outline-none focus:ring"
+                >
+                  Add Income/Expense
+                </button>
               </td>
             </tr>
           </tbody>

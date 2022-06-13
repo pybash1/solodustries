@@ -22,6 +22,15 @@ class AuthDB:
         self.db.put({"password": password.decode(), "name": name, "title": title, "desc": desc}, email)
         return {"email": email, "password": password}
 
+    def update_user(self, email: str, password: str, desc: str, title: str, name: str, hash: bool = True) -> Dict[str, str]:
+        if hash:
+            password = bcrypt.hashpw(password.encode(), bcrypt.gensalt())
+
+        if self.db.get(email) is not None:
+            raise UserExistsException("User already exists")
+        self.db.put({"password": password.decode(), "name": name, "title": title, "desc": desc}, email)
+        return {"email": email, "password": password}
+
     def get_user(self, email: str) -> Union[Dict[str, str], None]:
         if email == "":
             return None

@@ -1,31 +1,105 @@
 import Head from "next/head";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Navbar from "../components/Navbar";
 import toast, { Toaster } from "react-hot-toast";
+import { useRouter } from "next/router";
+import { checkCookies, getCookie } from "cookies-next";
 
 export default function Profile() {
-  const [name, setName] = useState("Free Lancer");
-  const [title, setTitle] = useState("Web Developer");
-  const [description, setDescription] = useState(
-    "Hi, I am Free Lancer, a web developer!"
-  );
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [name, setName] = useState("");
+  const [title, setTitle] = useState("");
+  const [description, setDescription] = useState("");
+  const router = useRouter();
+
+  const API_URL =
+    process.env.NODE_ENV === "development"
+      ? "http://localhost:8000"
+      : "https://solodustries.up.railway.app";
+
+  useEffect(() => {
+    fetch(API_URL + "/checkjwt", {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${getCookie("access_token")}`,
+      },
+    }).then((res) =>
+      res.json().then((data) => {
+        if (data.valid) {
+          setEmail(data.user.email);
+          setPassword(data.user.password);
+          setName(data.user.name);
+          setTitle(data.user.title);
+          setDescription(data.user.desc);
+        } else {
+          router.push("/");
+        }
+      })
+    );
+  }, []);
 
   const handleUpdate = (e) => {
     e.preventDefault();
-    toast.success("Successfully updated profile!")
+    fetch(API_URL + "/update", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${getCookie("access_token")}`,
+      },
+      body: JSON.stringify({
+        email: email,
+        password: password,
+        name: name,
+        title: title,
+        desc: description,
+      }),
+    }).then((res) =>
+      res.json().then((data) => {
+        if (data.message) {
+          toast.error(data.message);
+        } else {
+          toast.success("Profile updated successfully");
+        }
+      })
+    );
   };
+
+  useEffect(() => {
+    if (checkCookies("access_token")) {
+      fetch(API_URL + "/checkjwt", {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${getCookie("access_token")}`,
+        },
+      }).then((res) =>
+        res.json().then((data) => {
+          if (!data.valid) {
+            router.push("/");
+          }
+        })
+      );
+    } else {
+      router.push("/");
+    }
+  });
 
   return (
     <div className="bg-gray-900 min-h-screen">
       <Head>
         <title>Solodustries - Profile</title>
       </Head>
-      <Toaster position="bottom-center" toastOptions={{ 
-        style: {
+      <Toaster
+        position="bottom-center"
+        toastOptions={{
+          style: {
             background: "#1f2937",
-            color: "#fff"
-        }
-      }} />
+            color: "#fff",
+          },
+        }}
+      />
       <Navbar loggedin />
       <div className="max-w-screen-xl px-4 py-16 mx-auto sm:px-6 lg:px-8 text-white">
         <div className="max-w-lg mx-auto text-center">

@@ -50,6 +50,19 @@ def register(user: UserRegister, response: JSONResponse):
     return response
 
 
+@router.post("/update")
+def update(user: UserRegister, _=Depends(manager)):
+    if db.get_user(user.email) is None:
+        return JSONResponse({"message": "User not found"}, 200)
+
+    try:
+        db.update_user(user.email, user.password, user.desc, user.title, user.name)
+    except UserExistsException:
+        return JSONResponse({"message": "User already exists"}, 200)
+
+    return JSONResponse({"user": {"email": user.email, "desc": user.desc, "title": user.title, "name": user.name}}, 200)
+
+
 @router.get("/logout")
 def logout(response: JSONResponse, user=Depends(manager)):
     response = JSONResponse({"message": "Logged out"})

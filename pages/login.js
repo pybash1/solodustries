@@ -1,5 +1,4 @@
 import Head from "next/head";
-import { useRouter } from "next/router";
 import Navbar from "../components/Navbar";
 import LoginForm from "../components/LoginForm";
 

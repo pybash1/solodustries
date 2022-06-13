@@ -1,7 +1,106 @@
 import Navbar from "../components/Navbar";
 import Head from "next/head";
+import { useRouter } from "next/router";
+import { useEffect, useState } from "react";
+import { checkCookies, getCookie } from "cookies-next";
 
 export default function Resources() {
+  const router = useRouter();
+  const [resources, setResources] = useState([]);
+  const [name, setName] = useState("")
+  const [paid, setPaid] = useState("Yes")
+  const [link, setLink] = useState("")
+
+  const API_URL =
+    process.env.NODE_ENV === "development"
+      ? "http://localhost:8000"
+      : "https://solodustries.up.railway.app";
+
+  useEffect(() => {
+    if (checkCookies("access_token")) {
+      fetch(API_URL + "/checkjwt", {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${getCookie("access_token")}`,
+        },
+      }).then((res) =>
+        res.json().then((data) => {
+          if (!data.valid) {
+            router.push("/");
+          }
+        })
+      );
+    } else {
+      router.push("/");
+    }
+  });
+
+  useEffect(() => {
+    fetch(API_URL + "/resources", {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${getCookie("access_token")}`,
+      },
+    }).then((res) =>
+      res.json().then((data) => {
+        setResources(data);
+      })
+    );
+  }, []);
+
+  const addResource = () => {
+    fetch(API_URL + "/create/resource", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${getCookie("access_token")}`,
+      },
+      body: JSON.stringify({
+        "name": name,
+        "paid": paid === "Yes" ? true : false,
+        "link": link,
+      }),
+    }).then((res) =>
+      res.json().then((data) => {
+        fetch(API_URL + "/resources", {
+          method: "GET",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${getCookie("access_token")}`,
+          },
+        }).then((res) =>
+          res.json().then((data) => {
+            setResources(data);
+          })
+        );
+      })
+    );
+  };
+
+  const deleteResource = (cid) => {
+    fetch(API_URL+"/delete/resource/"+cid, {
+      method: "DELETE",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${getCookie("access_token")}`
+      }
+    }).then(res => res.json().then(data => {
+      fetch(API_URL + "/resources", {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${getCookie("access_token")}`,
+        },
+      }).then((res) =>
+        res.json().then((data) => {
+          setResources(data);
+        })
+      );
+    }))
+  }
+
   return (
     <div className="bg-gray-900 min-h-screen">
         <Head>
@@ -64,45 +163,83 @@ export default function Resources() {
                   </svg>
                 </div>
               </th>
+              <th></th>
+              <th></th>
             </tr>
           </thead>
 
           <tbody className="divide-y divide-gray-100">
+            {resources.map(resource => (
             <tr>
               <td className="p-4 font-medium text-white whitespace-nowrap">
-                Solodustries
+                {resource.resource.name}
               </td>
               <td className="p-4 text-gray-300 whitespace-nowrap">
                 <strong className="bg-red-100 text-red-700 px-3 py-1.5 rounded text-xs font-medium">
-                  Yes
+                {resource.resource.paid ? "Yes" : "No"}
                 </strong>
               </td>
               <td className="p-4 text-gray-300 whitespace-nowrap">
-                https://solodustries.vercel.app
+                {resource.resource.link}
               </td>
-            </tr>
-
+              <td className="p-4 text-pink-300 whitespace-nowrap"><button onClick={(e) => {deleteResource(resource.key)}}>Delete</button></td>
+              <td className="p-4 text-pink-300 whitespace-nowrap"><button>Edit</button></td>
+            </tr>))}
             <tr>
-              <td className="p-4 font-medium text-white whitespace-nowrap">OneHacks</td>
-              <td className="p-4 whitespace-nowrap">
-                <strong className="bg-green-100 text-green-700 px-3 py-1.5 rounded text-xs font-medium">
-                  No
-                </strong>
-              </td>
-              <td className="p-4 text-gray-300 whitespace-nowrap">
-                https://onehacks.org
-              </td>
-            </tr>
+              <td className="p-4 font-medium text-white whitespace-nowrap">
+                <div class="relative">
+                  <label class="sr-only" for="link">
+                    {" "}
+                    Name{" "}
+                  </label>
 
-            <tr>
-              <td className="p-4 font-medium text-white whitespace-nowrap">Visual Studio Code</td>
-              <td className="p-4 text-gray-300 whitespace-nowrap">
-                <strong className="bg-green-100 text-green-700 px-3 py-1.5 rounded text-xs font-medium">
-                  No
-                </strong>
+                  <input
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
+                    class="w-full py-3 pl-3 pr-12 text-sm border-2 bg-gray-900 border-gray-900 rounded"
+                    id="name"
+                    type="text"
+                    placeholder="Name"
+                  />
+                </div>
               </td>
               <td className="p-4 text-gray-300 whitespace-nowrap">
-                https://code.visualstudio.com
+                <select
+                  id="paid"
+                  class="text-sm rounded-lg block w-full p-2.5 bg-gray-900 border-gray-900 placeholder-gray-400 text-white "
+                  value={paid}
+                  onChange={(e) => {
+                    setPaid(e.target.value);
+                  }}
+                >
+                  <option>Yes</option>
+                  <option>No</option>
+                </select>
+              </td>
+              <td className="p-4 text-gray-300 whitespace-nowrap">
+                <div class="relative">
+                  <label class="sr-only" for="link">
+                    {" "}
+                    Link{" "}
+                  </label>
+
+                  <input
+                    value={link}
+                    onChange={(e) => setLink(e.target.value)}
+                    class="w-full py-3 pl-3 pr-12 text-sm border-2 bg-gray-900 border-gray-900 rounded"
+                    id="link"
+                    type="url"
+                    placeholder="Link"
+                  />
+                </div>
+              </td>
+              <td>
+                <button
+                  onClick={addResource}
+                  class="inline-block px-12 py-3 text-sm font-medium text-white bg-pink-600 border border-pink-600 rounded active:text-pink-500 hover:bg-transparent hover:text-pink-600 focus:outline-none focus:ring"
+                >
+                  Add Resource
+                </button>
               </td>
             </tr>
           </tbody>
