@@ -187,8 +187,8 @@ export default function Resources() {
             </tr>))}
             <tr>
               <td className="p-4 font-medium text-white whitespace-nowrap">
-                <div class="relative">
-                  <label class="sr-only" for="link">
+                <div className="relative">
+                  <label className="sr-only" htmlFor="link">
                     {" "}
                     Name{" "}
                   </label>
@@ -196,7 +196,7 @@ export default function Resources() {
                   <input
                     value={name}
                     onChange={(e) => setName(e.target.value)}
-                    class="w-full py-3 pl-3 pr-12 text-sm border-2 bg-gray-900 border-gray-900 rounded"
+                    className="w-full py-3 pl-3 pr-12 text-sm border-2 bg-gray-900 border-gray-900 rounded"
                     id="name"
                     type="text"
                     placeholder="Name"
@@ -206,7 +206,7 @@ export default function Resources() {
               <td className="p-4 text-gray-300 whitespace-nowrap">
                 <select
                   id="paid"
-                  class="text-sm rounded-lg block w-full p-2.5 bg-gray-900 border-gray-900 placeholder-gray-400 text-white "
+                  className="text-sm rounded-lg block w-full p-2.5 bg-gray-900 border-gray-900 placeholder-gray-400 text-white "
                   value={paid}
                   onChange={(e) => {
                     setPaid(e.target.value);
@@ -217,8 +217,8 @@ export default function Resources() {
                 </select>
               </td>
               <td className="p-4 text-gray-300 whitespace-nowrap">
-                <div class="relative">
-                  <label class="sr-only" for="link">
+                <div className="relative">
+                  <label className="sr-only" htmlFor="link">
                     {" "}
                     Link{" "}
                   </label>
@@ -226,7 +226,7 @@ export default function Resources() {
                   <input
                     value={link}
                     onChange={(e) => setLink(e.target.value)}
-                    class="w-full py-3 pl-3 pr-12 text-sm border-2 bg-gray-900 border-gray-900 rounded"
+                    className="w-full py-3 pl-3 pr-12 text-sm border-2 bg-gray-900 border-gray-900 rounded"
                     id="link"
                     type="url"
                     placeholder="Link"
@@ -236,7 +236,7 @@ export default function Resources() {
               <td>
                 <button
                   onClick={addResource}
-                  class="inline-block px-12 py-3 text-sm font-medium text-white bg-pink-600 border border-pink-600 rounded active:text-pink-500 hover:bg-transparent hover:text-pink-600 focus:outline-none focus:ring"
+                  className="inline-block px-12 py-3 text-sm font-medium text-white bg-pink-600 border border-pink-600 rounded active:text-pink-500 hover:bg-transparent hover:text-pink-600 focus:outline-none focus:ring"
                 >
                   Add Resource
                 </button>

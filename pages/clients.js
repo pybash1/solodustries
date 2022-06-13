@@ -232,8 +232,8 @@ export default function Clients() {
             ))}
             <tr>
               <td className="p-4 font-medium text-white whitespace-nowrap">
-                <div class="relative">
-                  <label class="sr-only" for="email">
+                <div className="relative">
+                  <label className="sr-only" htmlFor="email">
                     {" "}
                     Name{" "}
                   </label>
@@ -241,7 +241,7 @@ export default function Clients() {
                   <input
                     value={name}
                     onChange={(e) => setName(e.target.value)}
-                    class="w-full py-3 pl-3 pr-12 text-sm border-2 bg-gray-900 border-gray-900 rounded"
+                    className="w-full py-3 pl-3 pr-12 text-sm border-2 bg-gray-900 border-gray-900 rounded"
                     id="name"
                     type="text"
                     placeholder="Name"
@@ -249,8 +249,8 @@ export default function Clients() {
                 </div>
               </td>
               <td className="p-4 text-gray-300 whitespace-nowrap">
-                <div class="relative">
-                  <label class="sr-only" for="email">
+                <div className="relative">
+                  <label className="sr-only" htmlFor="email">
                     {" "}
                     Email{" "}
                   </label>
@@ -258,7 +258,7 @@ export default function Clients() {
                   <input
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
-                    class="w-full py-3 pl-3 pr-12 text-sm border-2 bg-gray-900 border-gray-900 rounded"
+                    className="w-full py-3 pl-3 pr-12 text-sm border-2 bg-gray-900 border-gray-900 rounded"
                     id="email"
                     type="email"
                     placeholder="Email"
@@ -268,7 +268,7 @@ export default function Clients() {
               <td className="p-4 text-gray-300 whitespace-nowrap">
                 <select
                   id="status"
-                  class="text-sm rounded-lg block w-full p-2.5 bg-gray-900 border-gray-900 placeholder-gray-400 text-white "
+                  className="text-sm rounded-lg block w-full p-2.5 bg-gray-900 border-gray-900 placeholder-gray-400 text-white "
                   value={status}
                   onChange={(e) => {
                     setStatus(e.target.value);
@@ -280,8 +280,8 @@ export default function Clients() {
                 </select>
               </td>
               <td className="p-4 text-gray-300 whitespace-nowrap">
-                <div class="relative">
-                  <label class="sr-only" for="email">
+                <div className="relative">
+                  <label className="sr-only" htmlFor="email">
                     {" "}
                     Phone Number{" "}
                   </label>
@@ -289,7 +289,7 @@ export default function Clients() {
                   <input
                     value={phone}
                     onChange={(e) => setPhone(e.target.value)}
-                    class="w-full py-3 pl-3 pr-12 text-sm border-2 bg-gray-900 border-gray-900 rounded"
+                    className="w-full py-3 pl-3 pr-12 text-sm border-2 bg-gray-900 border-gray-900 rounded"
                     id="phone"
                     type="number"
                     placeholder="Phone Number"
@@ -299,7 +299,7 @@ export default function Clients() {
               <td className="p-4 text-gray-300 whitespace-nowrap">
                 <button
                   onClick={addClient}
-                  class="inline-block px-12 py-3 text-sm font-medium text-white bg-pink-600 border border-pink-600 rounded active:text-pink-500 hover:bg-transparent hover:text-pink-600 focus:outline-none focus:ring"
+                  className="inline-block px-12 py-3 text-sm font-medium text-white bg-pink-600 border border-pink-600 rounded active:text-pink-500 hover:bg-transparent hover:text-pink-600 focus:outline-none focus:ring"
                 >
                   Add Client
                 </button>

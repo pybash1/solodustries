@@ -209,8 +209,8 @@ export default function Expenses() {
             </tr>))}
             <tr>
               <td className="p-4 font-medium text-white whitespace-nowrap">
-                <div class="relative">
-                  <label class="sr-only" for="item">
+                <div className="relative">
+                  <label className="sr-only" htmlFor="item">
                     {" "}
                     Item{" "}
                   </label>
@@ -218,7 +218,7 @@ export default function Expenses() {
                   <input
                     value={item}
                     onChange={(e) => setItem(e.target.value)}
-                    class="w-full py-3 pl-3 pr-12 text-sm border-2 bg-gray-900 border-gray-900 rounded"
+                    className="w-full py-3 pl-3 pr-12 text-sm border-2 bg-gray-900 border-gray-900 rounded"
                     id="item"
                     type="text"
                     placeholder="Item"
@@ -226,8 +226,8 @@ export default function Expenses() {
                 </div>
               </td>
               <td className="p-4 text-gray-300 whitespace-nowrap">
-                <div class="relative">
-                  <label class="sr-only" for="client">
+                <div className="relative">
+                  <label className="sr-only" htmlFor="client">
                     {" "}
                     Client{" "}
                   </label>
@@ -235,7 +235,7 @@ export default function Expenses() {
                   <input
                     value={client}
                     onChange={(e) => setClient(e.target.value)}
-                    class="w-full py-3 pl-3 pr-12 text-sm border-2 bg-gray-900 border-gray-900 rounded"
+                    className="w-full py-3 pl-3 pr-12 text-sm border-2 bg-gray-900 border-gray-900 rounded"
                     id="client"
                     type="text"
                     placeholder="Client"
@@ -245,7 +245,7 @@ export default function Expenses() {
               <td className="p-4 text-gray-300 whitespace-nowrap">
                 <select
                   id="countries"
-                  class="text-sm rounded-lg block w-full p-2.5 bg-gray-900 border-gray-900 placeholder-gray-400 text-white "
+                  className="text-sm rounded-lg block w-full p-2.5 bg-gray-900 border-gray-900 placeholder-gray-400 text-white "
                   value={type}
                   onChange={(e) => {
                     setType(e.target.value);
@@ -256,8 +256,8 @@ export default function Expenses() {
                 </select>
               </td>
               <td className="p-4 text-gray-300 whitespace-nowrap">
-                <div class="relative">
-                  <label class="sr-only" for="amount">
+                <div className="relative">
+                  <label className="sr-only" htmlFor="amount">
                     {" "}
                     Amount{" "}
                   </label>
@@ -265,7 +265,7 @@ export default function Expenses() {
                   <input
                     value={amount}
                     onChange={(e) => setAmount(e.target.value)}
-                    class="w-full py-3 pl-3 pr-12 text-sm border-2 bg-gray-900 border-gray-900 rounded"
+                    className="w-full py-3 pl-3 pr-12 text-sm border-2 bg-gray-900 border-gray-900 rounded"
                     id="amount"
                     type="number"
                     placeholder="Amount"
@@ -275,7 +275,7 @@ export default function Expenses() {
               <td className="p-4 text-gray-300 whitespace-nowrap">
                 <button
                   onClick={addExpense}
-                  class="inline-block px-12 py-3 text-sm font-medium text-white bg-pink-600 border border-pink-600 rounded active:text-pink-500 hover:bg-transparent hover:text-pink-600 focus:outline-none focus:ring"
+                  className="inline-block px-12 py-3 text-sm font-medium text-white bg-pink-600 border border-pink-600 rounded active:text-pink-500 hover:bg-transparent hover:text-pink-600 focus:outline-none focus:ring"
                 >
                   Add Income/Expense
                 </button>
